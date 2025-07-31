@@ -1,0 +1,464 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murel ICT - Empowering Small Businesses with Big Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        
+        .section-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-in-out;
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">Murel ICT</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center section-fade">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Small Businesses with Big Tech</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+                    At Murel ICT (Pty) Ltd, we build smart, scalable software and mobile applications tailored for small and micro enterprises in the Tech and E-Commerce space. Our mission is simple: to eliminate the barriers to technology by offering cutting-edge solutions with zero upfront development costs — you only cover the hosting.
+                </p>
+                <p class="text-lg mb-12 max-w-3xl mx-auto">
+                    But we don't stop at development. Our unique offering combines software engineering with hands-on operational support and commercial advisory to help your business not only launch but grow sustainably.
+                </p>
+                <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Murel ICT?</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center section-fade card-hover bg-gray-50 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Custom-Built Solutions</h3>
+                    <p class="text-gray-600">Applications tailored to your business goals</p>
+                </div>
+                <div class="text-center section-fade card-hover bg-gray-50 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Zero Upfront Fees</h3>
+                    <p class="text-gray-600">Pay only for hosting, no development costs</p>
+                </div>
+                <div class="text-center section-fade card-hover bg-gray-50 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">👨‍💼</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Industry Experts</h3>
+                    <p class="text-gray-600">Years of proven experience</p>
+                </div>
+                <div class="text-center section-fade card-hover bg-gray-50 p-6 rounded-lg">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Ongoing Support</h3>
+                    <p class="text-gray-600">Business and operational support post-launch</p>
+                </div>
+            </div>
+            <div class="text-center mt-16 section-fade">
+                <div class="bg-blue-50 p-8 rounded-lg max-w-4xl mx-auto">
+                    <p class="text-lg text-gray-700 mb-4">📍 Based in Centurion, serving clients across South Africa and beyond.</p>
+                    <p class="text-lg text-gray-700 mb-4">📞 Let's build your next big thing: <a href="tel:+27871490595" class="text-blue-600 hover:underline">+27 87 149 0595</a> / <a href="tel:+27726015403" class="text-blue-600 hover:underline">+27 72 601 5403</a></p>
+                    <p class="text-lg text-gray-700">📧 Email us: <a href="mailto:ict@murel.co.za" class="text-blue-600 hover:underline">ict@murel.co.za</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Us</h2>
+                <h3 class="text-xl text-blue-600 font-semibold">Technology Made Accessible. Success Made Sustainable.</h3>
+            </div>
+            <div class="max-w-4xl mx-auto section-fade">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Murel ICT (Pty) Ltd was founded with one mission: to empower underserved enterprises with access to powerful, professionally built digital solutions — without the financial hurdles that typically block innovation.
+                </p>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    We specialize in software and app development for SMMEs in the tech and e-commerce sectors. But unlike traditional development firms, we don't stop at delivery. We're deeply invested in the long-term success of our clients through operational support and strategic advisory tailored for growing businesses.
+                </p>
+                <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+                    Our team consists of industry veterans, commercial advisors, and technical experts who bring decades of combined experience to every solution we deliver.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div class="text-center card-hover bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">💡</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Affordability</h4>
+                        <p class="text-gray-600 text-sm">We build first, you only pay for hosting</p>
+                    </div>
+                    <div class="text-center card-hover bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">🤝</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Partnership</h4>
+                        <p class="text-gray-600 text-sm">Your growth is our goal</p>
+                    </div>
+                    <div class="text-center card-hover bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">⚡</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Simplicity</h4>
+                        <p class="text-gray-600 text-sm">Solutions that are easy to use, scale, and maintain</p>
+                    </div>
+                    <div class="text-center card-hover bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">🛠️</div>
+                        <h4 class="font-semibold text-gray-900 mb-2">Support</h4>
+                        <p class="text-gray-600 text-sm">Dedicated advisors beyond launch</p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-xl text-blue-600 font-semibold">From your first idea to your first thousand users — we're with you every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="section-fade card-hover bg-blue-50 p-8 rounded-lg">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Custom Software & App Development</h3>
+                    <p class="text-gray-700 leading-relaxed">We design and build responsive web platforms, mobile applications, and e-commerce systems tailored to your specific operational needs — with no upfront development cost.</p>
+                </div>
+                <div class="section-fade card-hover bg-blue-50 p-8 rounded-lg">
+                    <div class="text-4xl mb-4">🌐</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Hosting & Maintenance</h3>
+                    <p class="text-gray-700 leading-relaxed">Your only cost is hosting. We manage the deployment, updates, and backend maintenance to ensure your platform runs smoothly and securely.</p>
+                </div>
+                <div class="section-fade card-hover bg-blue-50 p-8 rounded-lg">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Operational Support</h3>
+                    <p class="text-gray-700 leading-relaxed">Need help integrating your software into day-to-day business processes? We assist with workflow design, staff onboarding, and basic digital operations management.</p>
+                </div>
+                <div class="section-fade card-hover bg-blue-50 p-8 rounded-lg">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Commercial Advisory</h3>
+                    <p class="text-gray-700 leading-relaxed">Access to experienced business consultants who guide you through go-to-market strategies, pricing models, customer acquisition, and sustainability planning.</p>
+                </div>
+            </div>
+            
+            <div class="section-fade bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Who We Serve:</h3>
+                <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🚀</div>
+                        <p class="text-gray-700 font-medium">Tech startups</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🛒</div>
+                        <p class="text-gray-700 font-medium">E-commerce vendors</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🏢</div>
+                        <p class="text-gray-700 font-medium">Service-based micro businesses</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">🌐</div>
+                        <p class="text-gray-700 font-medium">Niche digital platforms</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-2xl mb-2">📱</div>
+                        <p class="text-gray-700 font-medium">Informal sector entrepreneurs going digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-fade">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <h3 class="text-xl text-blue-600 font-semibold">Let's Build Something That Works for You</h3>
+                <p class="text-lg text-gray-700 mt-4">Whether you're at idea stage or ready to scale, we'd love to help you build the technology that drives your business forward.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="section-fade">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4">📍</div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-900">Visit Us:</h5>
+                                    <p class="text-gray-700">Limeroc Business Park, Knoppieslaagte,<br>Centurion, 0157, South Africa</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4">📞</div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-900">Call Us:</h5>
+                                    <p class="text-gray-700">
+                                        <a href="tel:+27871490595" class="text-blue-600 hover:underline">+27 87 149 0595</a> / 
+                                        <a href="tel:+27726015403" class="text-blue-600 hover:underline">+27 72 601 5403</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4">📧</div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-900">Email Us:</h5>
+                                    <p class="text-gray-700">
+                                        <a href="mailto:ict@murel.co.za" class="text-blue-600 hover:underline">ict@murel.co.za</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4">🌐</div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-900">Website:</h5>
+                                    <p class="text-gray-700">
+                                        <a href="http://www.murelmurelict.co.za" class="text-blue-600 hover:underline">www.murelmurelict.co.za</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-2xl mr-4">🕒</div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-900">Business Hours:</h5>
+                                    <p class="text-gray-700">Monday – Friday: 08:00 – 17:00<br>Saturday & Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-fade">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h4>
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold">Send Message</button>
+                        </form>
+                        <div id="formStatus" class="hidden mt-4 p-4 rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 section-fade">
+                <div class="bg-blue-600 text-white p-8 rounded-lg">
+                    <h4 class="text-2xl font-bold mb-4">👉 Ready to start? Contact us today</h4>
+                    <a href="tel:+27871490595" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-3xl font-bold text-blue-400 mb-4">Murel ICT</div>
+                <p class="text-gray-400 mb-4">Empowering Small Businesses with Big Tech</p>
+                <p class="text-gray-400 text-sm">© 2024 Murel ICT (Pty) Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with section-fade class
+        document.querySelectorAll('.section-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Make the first section visible immediately
+        document.querySelector('.section-fade').classList.add('visible');
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBk2CyrFBbs6QkfeTI2rTcwdv8B8qerZic",
+            authDomain: "murel-ict-backend.firebaseapp.com",
+            projectId: "murel-ict-backend",
+            storageBucket: "murel-ict-backend.firebasestorage.app",
+            messagingSenderId: "294033312796",
+            appId: "1:294033312796:web:6410227cc6f045b121a3d9"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const statusElement = document.getElementById('formStatus');
+            statusElement.textContent = "Sending your message...";
+            statusElement.className = "mt-4 p-4 bg-blue-100 text-blue-800 rounded-lg";
+            statusElement.classList.remove('hidden');
+            
+            try {
+                await db.collection("contactForms").add({
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    message: document.getElementById('message').value,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                
+                // Show success message
+                statusElement.textContent = "Message sent successfully!";
+                statusElement.className = "mt-4 p-4 bg-green-100 text-green-800 rounded-lg";
+                
+                // Clear the form
+                document.getElementById('contactForm').reset();
+                
+                // Hide status after 5 seconds
+                setTimeout(() => {
+                    statusElement.classList.add('hidden');
+                }, 5000);
+            } catch (error) {
+                // Show error message
+                statusElement.textContent = "Error sending message: " + error.message;
+                statusElement.className = "mt-4 p-4 bg-red-100 text-red-800 rounded-lg";
+            }
+        });
+    </script>
+</body>
+</html>
